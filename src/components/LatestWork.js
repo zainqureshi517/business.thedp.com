@@ -13,24 +13,32 @@ import { BLUE } from '../styles/constants'
 import { Badge } from './badge'
 
 const LatestWorkWrapper = s.div`
-  padding: 1rem 1rem;
-  padding-left: 15rem;
-  margin-right: 10rem;
+  padding: 1rem 0.5rem; /* Adjust the horizontal padding */
+  padding-left: 10rem; /* Adjust the left padding */
+  margin-right: 5rem; /* Adjust the right margin */
   margin-bottom: 2rem;
 
   @media (max-width: 992px) {
-    padding: 0 2rem;
+    padding: 0 1rem; /* Adjust the horizontal padding */
     margin-right: 0;
+    padding-left: 2rem; /* Adjust the left padding */
   }
 `
 
 const Title = s.h2`
   ${POPPINS_SEMI_BOLD}
-  color: ${BLUE};
+  color: ${"#800000"};
 
   @media (max-width: 768px) {
     margin-bottom: 2rem;
   }
+`
+
+const ProjectContainer = s.div`
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
 `
 
 const ProjectName = s.h2`
@@ -38,8 +46,8 @@ const ProjectName = s.h2`
   margin-top: 1rem;
 `
 
-const Divider = s.p`
-  border-top: 1px solid rgba(224,224,224,0.5);
+const Divider = s.hr`
+  border: 0.5px solid rgba(224,224,224,0.5);
   margin: 1.5rem 0;
 `
 
@@ -53,58 +61,46 @@ const ProjectDescription = s.p`
     margin-bottom: 2rem;
   }
 `
-
-const tags = ['React Native', 'Apollo', 'GraphQL']
-
 export const LatestWork = () => {
   const data = useStaticQuery(graphql`
     query {
-      screenshot: file(relativePath: { eq: "app-screen.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      logo: file(relativePath: { eq: "dp-plus-black.png" }) {
-        childImageSharp {
-          fluid(maxHeight: 100) {
-            ...GatsbyImageSharpFluid
+      allProductsJson {
+        edges {
+          node {
+            name
+            description
+            img {
+              childImageSharp {
+                fluid(maxWidth: 1300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   `)
 
-  const { screenshot, logo } = data
-
   return (
     <>
       <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-        <Title> Latest Work </Title>
+        <Title> Our Latest Projects </Title>
       </div>
       <LatestWorkWrapper>
         <Row>
-          <Col md={6}>
-            <Img fluid={logo.childImageSharp.fluid} style={{ width: '60px' }} />
-            <ProjectName> DP+ </ProjectName>
-            {tags.map(tag => (
-              <Badge> {tag} </Badge>
-            ))}
-            <Divider />
-            <ProjectDescription>
-              The mobile app that allows you to read stories from all three
-              publications at the palm of your hands. You can view the trending
-              stories, search articles by keywords, and bookmark your favorites.
-            </ProjectDescription>
-          </Col>
-          <Col md={6}>
-            <Img
-              fluid={screenshot.childImageSharp.fluid}
-              style={{ width: '300px', margin: '0 auto' }}
-            />
-          </Col>
+          {data.allProductsJson.edges.map(({ node }, index) => (
+            <Col key={index} md={4}>
+              <ProjectContainer>
+                <Img fluid={node.img.childImageSharp.fluid} style={{ width: '100%', borderRadius: '10px' }} />
+                <ProjectName> {node.name} </ProjectName>
+                <Divider />
+                <ProjectDescription>
+                  {node.description}
+                </ProjectDescription>
+              </ProjectContainer>
+            </Col>
+          ))}
         </Row>
       </LatestWorkWrapper>
     </>

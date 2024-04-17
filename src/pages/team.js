@@ -156,11 +156,9 @@ const Teams = () => {
     <Container title="Team | ">
       <div style={{ marginTop: '2rem' }}>
         <div style={{ textAlign: 'center' }}>
-          <PageTitle> Meet the Team </PageTitle>
+          <PageTitle> The Daily Pennsylvanian Inc. </PageTitle>
           <PageDescription>
-            DP Developers is run by a group of skilled and hardworking students at
-            Penn, collaborating to bring the stories of The Daily Pennsylvanian
-            publications to the digital world.
+          As the leading independent student media organization at the University of Pennsylvania, The Daily Pennsylvanian, Inc. seeks to inform and drive conversation while providing enduring student experiences in journalism and leadership. 
           </PageDescription>
         </div>
         {teams.map((team, idx) => (

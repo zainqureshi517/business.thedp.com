@@ -129,13 +129,13 @@ const StyledPageDescription = s(PageDescription)`
   }
 `
 
-const Products = () => {
+const Departments = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { eq: "products.json" } }) {
+      allFile(filter: { relativePath: { eq: "departments.json" } }) {
         edges {
           node {
-            childrenProductsJson {
+            childrenDepartmentsJson {
               img {
                 childImageSharp {
                   fluid(maxWidth: 1100) {
@@ -155,32 +155,27 @@ const Products = () => {
   `)
 
   const {
-    node: { childrenProductsJson: products }
+    node: { childrenDepartmentsJson : departments }
   } = data.allFile.edges[0]
 
   return (
-    <Container title="Products | ">
+    <Container title="Departments | ">
       <StyledRow style={{ margin: '5rem 0 2rem 0' }}>
         <Col lg={4}>
-          <PageTitle> Our Products </PageTitle>
+          <PageTitle> Our Team </PageTitle>
           <StyledPageDescription>
-            Building useful and elegant products is the central goal that unites
-            all of our members. The belief that we are doing great work is what
-            drives the department forward and keeps us motivated. At DP Tech, we
-            build both short term projects such as bi-weekly project pages and
-            long term projects including DP+ and websites redesign. For more
-            details, checkout our&nbsp;
-            <StyledAnchor href="https://github.com/dailypenn" target="_blank">
-              GitHub repos.
+          DP Business consists of five departments dedicated to preserving the reach and financial success of The Daily Pennsylvanian, Inc. Students can apply to the Strategy & Promotion, Innovation Lab, Consulting, Finance & Accounting, and Analytics departments. These teams offer the unique opportunity of providing practical work experience to students and a chance to apply business strategies and tools to improve an independent, functioning media company. DP Business also provides an engaging community, emphasizing collaboration across editorial and business departments. For more information about our media products, check out our&nbsp;
+            <StyledAnchor href="https://thedp.com" target="_blank">
+              website.
             </StyledAnchor>
           </StyledPageDescription>
         </Col>
         <Col lg={8}>
           <Row>
-            {products.map((product, idx) => (
+            {departments.map((department, idx) => (
               <Col md={6}>
                 <Card>
-                  <CardContent {...product} idx={idx} />
+                  <CardContent {...department} idx={idx} />
                 </Card>
               </Col>
             ))}
@@ -191,4 +186,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Departments

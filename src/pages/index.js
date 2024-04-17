@@ -27,8 +27,8 @@ const Hero = s.div`
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   
-  animation: animateBg 5s linear infinite;
-  background-image: linear-gradient(0deg,#fb7264,#19bafd,#fb7264,#19bafd);
+  animation: animateBg 5s circular infinite;
+  background-image: linear-gradient(0deg,#aa1e22,#aa1e22,#aa1e22,#aa1e22);
   background-size: 100% 300%;
 
   @keyframes animateBg {
@@ -124,11 +124,9 @@ const Recruitment = () => {
         <LeftColWrapper>
           <RecruitmentTitle> We're Recruiting! </RecruitmentTitle>
           <RecruitmentDescription>
-            As a newly established department, DP Developers is actively looking for
-            passionate engineers who would love to expand the digital influence
-            of the DP around the campus. We understand that people come from
-            different backgrounds, so the qualities we value the most are willingness to
-            absorb new knowledge and persistence to contribute.
+          The Daily Pennsylvanian is a $3-million, student-run media organization. Our incredible teams work together to market our products and sustain our business. Through the DP, students experience working for a real company, with real staffers, clients, and revenues. Join one of our teams to gain an invaluable, hands-on experience unlike any other.
+
+
           </RecruitmentDescription>
           <StyledAnchor
             href="https://docs.google.com/forms/d/e/1FAIpQLSeduPvGWySAkxCWQwdrvpvSppx2455xjNRh1yi4aCn_lJnQ2Q/viewform"
@@ -150,16 +148,16 @@ const Index = () => {
     <Container>
       <Hero>
         <span role="emoji" style={{ fontSize: '4rem' }}>
-          👋
+        Welcome to
         </span>
-        <HelloWorld> Hello world. </HelloWorld>
-        <p style={{ fontSize: '2.5rem' }}>We're the DP Developers!</p>
+        <HelloWorld> DP Business </HelloWorld>
+        <p style={{ fontSize: '2.5rem' }}></p>
         <SubHead>
-          We power everything digital by The Daily Pennsylvanian, <br /> Penn's award-winning independently-run media company.
+          We oversee the business operations of The Daily Pennsylvanian, <br /> Penn's award-winning independently-run media company.
         </SubHead>
-        <StyledLink to="/products">
+        <StyledLink to="/departments">
           <Checkout>
-            Check out our featured projects <Chevron />
+            Check out our departments <Chevron />
           </Checkout>
         </StyledLink>
       </Hero>

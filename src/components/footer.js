@@ -16,20 +16,16 @@ const LeftSections = [
     link: '/'
   },
   {
-    title: 'Team',
+    title: 'What We Do',
     link: '/team'
   },
   {
-    title: 'Products',
-    link: '/products'
+    title: 'Departments',
+    link: '/departments'
   }
 ]
 
 const RightSections = [
-  {
-    title: 'Projects @ The DP',
-    link: 'https://projects.thedp.com/'
-  },
   {
     title: 'The Daily Pennsylvanian',
     link: 'https://www.thedp.com/'
@@ -41,6 +37,10 @@ const RightSections = [
   {
     title: 'Under the Button',
     link: 'https://www.underthebutton.com/'
+  },
+  {
+    title: 'Donate to the DP',
+    link: 'https://www.classy.org/give/506065/#!/donation/checkout'
   }
 ]
 
@@ -95,8 +95,8 @@ export const Footer = () => (
   <StyledRow>
     <ColWithMargin md={6}>
       <FooterText>
-        Made with 💖 by the DP Developers <br /> &copy; The Daily
-        Pennsylvanian 2022
+        Made with 💖 by DP Business <br /> &copy; The Daily
+        Pennsylvanian 2024
       </FooterText>
       <StyledLink to="/apply">
         <ApplyButton> APPLY </ApplyButton>

@@ -1,38 +1,32 @@
 [
   {
-    "name": "DP+",
-    "description": "The mobile app that allows you to read stories from all three publications at the palm of your hands. You can view the trending stories, search articles by keywords, and bookmark your favorites.",
+    "name": "Strategy and Promotion",
+    "description": "DP Strategy & Promotions develops and enhances the unique brand identity of The Daily Pennsylvanian Inc., a $3 million dollar business. Our associates work to strategize and launch targeted product marketing campaigns that showcase the content of the DP, 34th Street Magazine, and Under the Button.",
     "img": "../images/dp-plus-black.png",
     "link": "https://github.com/dailypenn/canada-goose"
   },
   {
-    "name": "Projects @ The DP",
-    "description": "Project pages and standalone interactives for all three publications, including the iconic election guide, year in review, covid page, and even more. Built in GatsbyJS and NextJS.",
+    "name": "Innovation Lab",
+    "description": "The Innovation Lab team is responsible for all research and development of new revenue sources including new products, services, and events. Innovation Lab members will be tasked with assessing new ideas from within the organization, sourcing and building new revenue-building products for the Daily Pennsylvanian Inc., and fleshing out any approved new products and ventures.",
     "img": "../images/project-page.png",
     "link": "https://projects.thedp.com/"
   },
   {
-    "name": "Recommendation Engine",
-    "description": "The data science team at the DP created a dynamic more like this feature using DP-specific document embeddings to provide users with more relevant content. Built using Python and SQL",
+    "name": "Finance and Accounting",
+    "description": "While they teach the theory of finance in Wharton, the DP provides an ideal business laboratory where the money is real. The Finance & Accounting team is responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian Inc. including budget creation, revenue and expenditure analysis, and investment strategy",
     "img": "../images/more-like-this.png",
     "link": "https://github.com/dailypennanalytics/dpcontentrec"
   },
   {
-    "name": "The Daily Pennsylvanian Website",
-    "description": "The main website for the Daily Pennsylvanian that delivers the latest news, photos, and videos. Receiving more than 10,000 views each day, thedp.com is the most widely used news website across the campus.",
+    "name": "Consulting",
+    "description": "The Consulting team develops strategic advertising campaigns and produces pitch materials for advertising and sponsorship sales for The Daily Pennsylvanian Inc. DP Consultants work to build relationships with local and national business to help them better reach the Penn audience through partnerships with the DP. ",
     "img": "../images/dp-website.png",
     "link": "https://www.thedp.com/"
   },
   {
-    "name": "34th Street Magazine Website",
-    "description": "Styled using the iconic green tint, the website of 34th Street is where you can keep yourself updated with the pulse of music, film, and cultural news.",
+    "name": "Analytics",
+    "description": "DP Analytics is the data science and business analytics hub of the Daily Pennsylvanian. The Analytics department leverages modern tools and technologies to enhance the digital and data analytics capabilities of the DP. Whether it is building detailed and interactive visualizations on Python, developing algorithms to analyze popular article topics, or working with various teams to drive growth in the DP’s business initiatives, DP Analytics staffers work on projects with direct impact on the DP, the Penn community, and a global readership audience.",
     "img": "../images/street-website.png",
     "link": "https://www.34st.com/"
-  },
-  {
-    "name": "Under the Button Website",
-    "description": "Penn’s only intentionally satirical publication, known for its signature memes and snark, is a campus fixture for highlighting the pulse of student life.",
-    "img": "../images/utb-website.png",
-    "link": "https://www.underthebutton.com/"
   }
 ]

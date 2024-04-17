@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'DP Developers'
+    title: 'DP Business'
   },
   plugins: [
     `gatsby-transformer-json`,

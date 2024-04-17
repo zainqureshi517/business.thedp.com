@@ -44,11 +44,8 @@ const ImgWrapper = s.div`
 `
 
 const roles = [
-  'Innovation Lab',
-  'Strategy & Promotions',
-  'Analytics',
-  'Finance',
-  'Consulting'
+  'Web Engineer',
+  'Mobile Engineer',
   // 'Analytics'
   // 'Backend Engineer',
   // 'UI/UX Designers'
@@ -135,7 +132,7 @@ const Recruitment = ({ open }) => {
 }
 
 
-const Apply = () => {
+const Finance = () => {
 
   const recruiting = true;
 
@@ -159,4 +156,4 @@ const Apply = () => {
   )
 }
 
-export default Apply
+export default Finance
