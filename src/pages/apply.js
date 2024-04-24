@@ -75,7 +75,7 @@ const ApplyHere = s.span`
 const Recruitment = ({ open }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "web-building.png" }) {
+      file(relativePath: { eq: "IMG_8363.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid

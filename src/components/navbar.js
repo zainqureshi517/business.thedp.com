@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Navbar, NavDropdown } from 'react-bootstrap'
-import s from 'styled-components'
+import React, { useState } from 'react';
+import { Navbar, NavDropdown } from 'react-bootstrap';
+import styled from 'styled-components';
 
-import { StyledLink } from './typography'
-import { ApplyButtonNav } from './badge'
-import { POPPINS_SEMI_BOLD } from '../styles/fonts'
+import { StyledLink } from './typography';
+import { ApplyButtonNav } from './badge';
+import { MONTSERRAT_SEMI_BOLD, POPPINS_SEMI_BOLD } from '../styles/fonts';
 
 const LINKS = [
   {
@@ -18,54 +18,61 @@ const LINKS = [
   {
     name: 'Departments',
     link: '/departments',
-    dropdown: true,
     submenu: [
       { name: 'Innovation Lab', link: '/innovationlab' },
       { name: 'S&P', link: '/strategy' },
       { name: 'Finance', link: '/finance' },
-      { name: 'Analytics', link: '/analytics' }
+      { name: 'Analytics', link: '/analytics' },
+      { name: 'Consulting', link: '/consulting' }
     ]
   }
-]
+];
 
-const NavBarText = s(Navbar.Text)`
-  ${POPPINS_SEMI_BOLD}
+const NavBarText = styled(Navbar.Text)`
+  ${MONTSERRAT_SEMI_BOLD}
   color: black;
-`
+`;
 
-const NavText = ({ link, name, dropdown, submenu }) => {
+const NavText = ({ link, name, submenu }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleMouseEnter = () => {
-    if (dropdown) setShowDropdown(true);
+    setShowDropdown(true);
   };
 
   const handleMouseLeave = () => {
-    if (dropdown) setShowDropdown(false);
+    setShowDropdown(false);
   };
+
+  const StyledNavDropdown = styled(NavDropdown)`
+  position: absolute;
+  left: -7rem;
+  transform: translateX(-50%);
+  top: 250%; // Adjust this value as needed to move the dropdown below the "Departments" link
+`;
 
   return (
     <StyledLink
       to={link}
-      style={{ marginRight: '3rem', display: 'flex', alignItems: 'center' }}
+      style={{ position: 'relative', marginRight: '1.5rem', display: 'flex', alignItems: 'center' }} // Set position to relative
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <NavBarText style={{ color: 'black', marginRight: '0.5rem' }}>{name}</NavBarText>
-      {dropdown && (
-        <NavDropdown show={showDropdown} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          {submenu.map(item => (
+      {submenu && (
+        <StyledNavDropdown show={showDropdown} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        {submenu.map(item => (
             <NavDropdown.Item key={item.link}>
               <StyledLink to={item.link}>{item.name}</StyledLink>
             </NavDropdown.Item>
           ))}
-        </NavDropdown>
+        </StyledNavDropdown>
       )}
     </StyledLink>
   );
 };
 
-const CollapseWrapper = s(Navbar.Collapse)`
+const CollapseWrapper = styled(Navbar.Collapse)`
   justify-content: flex-end;
   margin: 0.5rem 0;
 
@@ -73,6 +80,13 @@ const CollapseWrapper = s(Navbar.Collapse)`
     display: flex;
     flex-direction: column;
   }
+`;
+
+const StyledNavDropdown = styled(NavDropdown)`
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  top: 100%; // Adjust this value as needed to move the dropdown below the "Departments" link
 `;
 
 export const NavBar = () => (
@@ -87,21 +101,21 @@ export const NavBar = () => (
   >
     <StyledLink to="/">
       <Navbar.Brand>
-        <img src="/logo-rect.png" height="40" alt="logo" />
+        <img src="/logo-rect.png" height="70" alt="logo" />
       </Navbar.Brand>
     </StyledLink>
     <Navbar.Toggle style={{ border: 'none' }}>
       <img src="/menu.svg" alt="menu" />
     </Navbar.Toggle>
     <Navbar.Collapse className="justify-content-end">
-      {/* <CollapseWrapper> */}
+      <CollapseWrapper>
         {LINKS.map(link => (
           <NavText key={link.name} {...link} />
         ))}
         <StyledLink to="/apply">
-          <ApplyButtonNav> Apply </ApplyButtonNav>
+          <ApplyButtonNav>Apply</ApplyButtonNav>
         </StyledLink>
-      {/* </CollapseWrapper> */}
+      </CollapseWrapper>
     </Navbar.Collapse>
   </Navbar>
 );

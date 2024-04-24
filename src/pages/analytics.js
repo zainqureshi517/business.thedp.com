@@ -177,20 +177,20 @@ const Teams = () => {
   // Filter members and projects by team 'Innovation Lab'
   const filteredTeams = allTeamJson.nodes.map(team => ({
     ...team,
-    members: team.members.filter(member => member.tags.includes("Innovation Lab"))
+    members: team.members.filter(member => member.tags.includes("Analytics"))
   })).filter(team => team.members.length > 0);
   const filteredProjects = allProjectsJson.nodes.filter(project =>
-    project.team === "Innovation Lab"
+    project.team === "Analytics"
   );
 
   return (
-    <Container title="Innovation Lab | ">
+    <Container title="Analytics | ">
       <div style={{ marginTop: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <DescriptionWrapper>
-            <PageTitle> Innovation Lab </PageTitle>
+            <PageTitle> Analytics </PageTitle>
             <PageDescription>
-              The Innovation Lab team is responsible for all research and development of new revenue sources including new products, services, and events. Innovation Lab members will be tasked with assessing new ideas from within the organization, sourcing and building new revenue-building products for the Daily Pennsylvanian Inc., and fleshing out any approved new products and ventures.
+            While they teach the theory of finance in Wharton, the DP provides an ideal business laboratory where the money is real. The Finance & Accounting team is responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian Inc. including budget creation, revenue and expenditure analysis, and investment strategy
             </PageDescription>
           </DescriptionWrapper>
           <ImageWrapper>

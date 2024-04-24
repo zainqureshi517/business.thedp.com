@@ -1,0 +1,24 @@
+[
+    {
+      "name": "High School News Letter",
+      "description": "A new bi-weekly newsletter launched by the Daily Pennsylvanian aimed at helping high schooler stay caught up with opportunities in and around the school and eventually write a strong Why Penn essay!",
+      "img": "../images/dp-plus-black.png",
+      "team": "Innovation Lab",
+      "link": "https://github.com/dailypenn/canada-goose"
+    },
+    {
+      "name": "DP Hacks",
+      "description": "A first of its kind hackathon hosted by the Daily Pennsylvanian which challenges Penn developers to create new products, services, or plans which provide some value to the larger Penn community.",
+      "img": "../images/project-page.png",
+      "team": "Innovation Lab",
+      "link": "https://projects.thedp.com/"
+    },
+    {
+        "name": "SEO Engine",
+        "description": "A first of its kind hackathon hosted by the Daily Pennsylvanian which challenges Penn developers to create new products, services, or plans which provide some value to the larger Penn community.",
+        "img": "../images/project-page.png",
+        "team": "Analytics",
+        "link": "https://projects.thedp.com/"
+    }
+  ]
+  

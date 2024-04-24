@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 
 import { Container, PageTitle, Badge } from '../components'
 import { LIGHT_BLUE, WHITE, RED, RED_PERCENT } from '../styles/constants'
-import { POPPINS_SEMI_BOLD, POPPINS_LIGHT, POPPINS_BOLD } from '../styles/fonts'
+import { POPPINS_SEMI_BOLD, POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_BOLD, PLAYFAIR_DISPLAY_LIGHT, PLAYFAIR_DISPLAY_MEDIUM } from '../styles/fonts'
 
 const CardWrapper = s.div`
   background-color: ${WHITE};
@@ -91,11 +91,11 @@ const Members = ({ members }) => (
 )
 
 const TeamTitle = s.h2`
-  ${POPPINS_SEMI_BOLD}
+  ${MONTSERRAT_BOLD}
 `
 
 const TeamDescription = s.p`
-  ${POPPINS_LIGHT}
+  ${PLAYFAIR_DISPLAY_LIGHT}
   width: 40%;
   margin-top: 0.9rem;
 
@@ -105,7 +105,7 @@ const TeamDescription = s.p`
 `
 
 const PageDescription = s.p`
-  ${POPPINS_BOLD}
+  ${PLAYFAIR_DISPLAY_MEDIUM}
   margin-top: 2rem;
   padding: 0 25rem;
 

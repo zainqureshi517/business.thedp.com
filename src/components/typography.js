@@ -2,10 +2,10 @@ import React from 'react'
 import s from 'styled-components'
 import { Link } from 'gatsby'
 
-import { POPPINS_BOLD, POPPINS_REGULAR } from '../styles/fonts'
+import { MONTSERRAT_BOLD, MONTSERRAT_REGULAR, MONTSERRAT_SEMI_BOLD, PLAYFAIR_DISPLAY_REGULAR, POPPINS_BOLD, POPPINS_REGULAR } from '../styles/fonts'
 
 export const PageTitle = s.h1`
-  ${POPPINS_BOLD}
+  ${PLAYFAIR_DISPLAY_REGULAR}
   font-size: 4rem;
 
   @media screen and (max-width: 768px) {
@@ -16,7 +16,7 @@ export const PageTitle = s.h1`
 export const PageDescription = s.p`
   font-size: 0.9rem;
   margin-top: 2rem;
-  ${POPPINS_REGULAR}
+  ${MONTSERRAT_REGULAR}
 `
 
 export const StyledLink = s(Link)`

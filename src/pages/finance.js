@@ -1,159 +1,213 @@
 import React from 'react'
 import s from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { Row, Col } from 'react-bootstrap'
+import ProjectsCarousel from '../components/projectCarousel';
 
-import {
-  Container,
-  Badge,
-  PageTitle,
-  PageDescription,
-  Chevron,
-  StyledAnchor
-} from '../components'
-import { BLUE_PERCENT, RED, BLUE, WHITE } from '../styles/constants'
-import { POPPINS_BOLD } from '../styles/fonts'
+import { Container, PageTitle, Badge } from '../components'
+import { LIGHT_BLUE, WHITE, RED, RED_PERCENT } from '../styles/constants'
+import { POPPINS_SEMI_BOLD, POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_BOLD, MONTSERRAT_LIGHT, PLAYFAIR_DISPLAY_SEMI_BOLD, MONTSERRAT_REGULAR, PLAYFAIR_DISPLAY_REGULAR } from '../styles/fonts'
 
-const Wrapper = s.div`
-  background-color: ${BLUE_PERCENT(0.04)};
-  padding: 3rem 0;
-`
+const CardWrapper = s.div`
+  background-color: ${WHITE};
+  border-radius: 24px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.06);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 1rem;
 
-const IFrameWrapper = s.div`
-  margin: auto;
-  width: 80%;
-
-  .iframe {
-    height: calc(100% - 59px);
+  :hover {
+    transform: scale(1.01);
   }
+  transition: all 0.3s;
+  overflow: hidden;
 
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-`
-
-const ImgWrapper = s.div`
-  background-color: ${RED};
-  border-radius: 22px;
-  padding: 1rem;
-
-  @media (max-width: 992px) {
-    margin-top: 2rem;
+  @media screen and (max-width: 768px) {
+    padding: 2rem 0;
+    margin: 1rem 0.5rem;
   }
 `
 
-const roles = [
-  'Web Engineer',
-  'Mobile Engineer',
-  // 'Analytics'
-  // 'Backend Engineer',
-  // 'UI/UX Designers'
-]
-
-const StyledRow = s(Row)`
-  margin: 5rem 0;
-  padding-left: 5rem;
-  padding-right: 3rem;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-`
-
-const ApplyHere = s.span`
+const CardTitle = s.p`
+  font-size: 1.4rem;
   ${POPPINS_BOLD}
-  color: ${RED};
-  margin-left: 0.3rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `
 
-const Recruitment = ({ open }) => {
-  const data = useStaticQuery(graphql`
+const CardDescription = s.div`
+  ${POPPINS_LIGHT}
+  margin-top: 2rem;
+`
+
+const MemberImg = s(Img)`
+  border-radius: 50%;
+  margin: auto;
+  border: 5px solid ${RED};
+`
+
+const Card = ({ name, tags, img, emoji, from }) => (
+  <CardWrapper>
+    <Col md={6}>
+      <MemberImg fluid={img?.childImageSharp?.fluid} />
+    </Col>
+    <Col md={6}>
+      <CardTitle>
+        {name} {emoji}
+      </CardTitle>
+      {tags.map(tag => (
+        <Badge bgColor={RED_PERCENT(0.32)}> {tag} </Badge>
+      ))}
+      {from
+        && <CardDescription> from {from} </CardDescription>
+      }
+    </Col>
+  </CardWrapper>
+)
+
+const SectionWrapper = s.div`
+  background-color: ${({ idx }) => (idx % 2 === 0 ? LIGHT_BLUE : WHITE)};
+  padding: 4rem 7rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+`
+
+const Members = ({ members }) => (
+  <Row>
+    {members.map(member => (
+      <Col lg={4}>
+        <Card {...member} />
+      </Col>
+    ))}
+  </Row>
+)
+
+const TeamTitle = s.h2`
+  ${PLAYFAIR_DISPLAY_REGULAR}
+`
+
+const TeamDescription = s.p`
+  ${MONTSERRAT_REGULAR}
+  width: 40%;
+  margin-top: 0.9rem;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`
+
+const PageDescription = s.p`
+  ${MONTSERRAT_LIGHT}
+  margin-top: 2rem;
+`
+
+const DescriptionWrapper = s.div`
+  padding: 3rem 7rem;
+  flex: 1;
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+`
+const ImageWrapper = s.div`
+  padding: 3rem 3rem;
+  flex: 1;
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+`
+
+const Teams = () => {
+  const { allTeamJson, allProjectsJson, imageSharp } = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "web-building.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid
+      allTeamJson {
+        nodes {
+          name
+          description
+          members {
+            name
+            tags
+            emoji
+            from
+            img {
+              childImageSharp {
+                fluid(maxWidth: 1000, maxHeight: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
+      allProjectsJson {
+        nodes {
+          name
+          description
+          img {
+            childImageSharp {
+              fluid(maxWidth: 1000, maxHeight: 1000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          team
+          link
+        }
+      }
+      imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
-  `)
+  `);
 
-  const img = data.file
+  // Filter members and projects by team 'Innovation Lab'
+  const filteredTeams = allTeamJson.nodes.map(team => ({
+    ...team,
+    members: team.members.filter(member => member.tags.includes("Finance"))
+  })).filter(team => team.members.length > 0);
+  const filteredProjects = allProjectsJson.nodes.filter(project =>
+    project.team === "Finance"
+  );
 
   return (
-    <>
-      {open ? (
-        <StyledRow>
-          <Col lg={6}>
-            <PageTitle> We're Recruiting! </PageTitle>
+    <Container title="Strategy and Promotions | ">
+      <div style={{ marginTop: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <DescriptionWrapper>
+            <PageTitle> Finance </PageTitle>
             <PageDescription>
-            The Daily Pennsylvanian is a $3-million, student-run media organization. Our incredible teams work together to market our products and sustain our business. Through the DP, students experience working for a real company, with real staffers, clients, and revenues. Join one of our teams to gain an invaluable, hands-on experience unlike any other.
+            While they teach the theory of finance in Wharton, the DP provides an ideal business laboratory where the money is real. The Finance & Accounting team is responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian Inc. including budget creation, revenue and expenditure analysis, and investment strategy
             </PageDescription>
-            {roles.map(role => (
-              <Badge> {role} </Badge>
-            ))}
-            <StyledAnchor
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform"
-              target="_blank"
-            >
-              <div style={{ marginTop: '2rem' }}>
-                <Chevron bgColor={BLUE} color={WHITE} />{' '}
-                <ApplyHere> APPLY HERE </ApplyHere>
-              </div>
-            </StyledAnchor>
-          </Col>
-          <Col>
-            <ImgWrapper>
-              <Img fluid={img.childImageSharp.fluid} />
-            </ImgWrapper>
-          </Col>
-        </StyledRow>
-      ) : (
-        <StyledRow>
-          <Col lg={6}>
-            <PageTitle> Applications have closed. </PageTitle>
-            <PageDescription>
-              Please apply next semester!
-            </PageDescription>
-          </Col>
-          <Col>
-            <ImgWrapper>
-              <Img fluid={img.childImageSharp.fluid} />
-            </ImgWrapper>
-          </Col>
-        </StyledRow>
-      )}
-    </>
+          </DescriptionWrapper>
+          <ImageWrapper>
+            <Img fluid={imageSharp.fluid} alt="Relevant Image" />
+          </ImageWrapper>
+        </div>
+        <ProjectsCarousel projects={filteredProjects} />
+        {filteredTeams.map((team, idx) => (
+          <SectionWrapper idx={idx}>
+            <TeamTitle>{team.name}</TeamTitle>
+            <TeamDescription>{team.description}</TeamDescription>
+            <Members members={team.members} />
+          </SectionWrapper>
+        ))}
+      </div>
+    </Container>
   )
 }
 
-
-const Finance = () => {
-
-  const recruiting = true;
-
-  return (
-    <>
-      {recruiting ? (
-        <Container title="Apply | ">
-          <Recruitment open = {true}/>
-          <Wrapper>
-            <IFrameWrapper>
-              <iframe class="application-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform" frameborder="0" onmousewheel="" width="100%" height="600" style={{ background: "transparent", border: "1px solid #ccc" }}></iframe>
-            </IFrameWrapper>
-          </Wrapper>
-        </Container>
-      ) : (
-        <Container title="Apply | ">
-          <Recruitment open = {recruiting}/>
-        </Container>
-      )}
-    </>
-  )
-}
-
-export default Finance
+export default Teams

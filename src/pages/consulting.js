@@ -180,17 +180,17 @@ const Teams = () => {
     members: team.members.filter(member => member.tags.includes("Innovation Lab"))
   })).filter(team => team.members.length > 0);
   const filteredProjects = allProjectsJson.nodes.filter(project =>
-    project.team === "Innovation Lab"
+    project.team === "Consulting"
   );
 
   return (
-    <Container title="Innovation Lab | ">
+    <Container title="Consulting | ">
       <div style={{ marginTop: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <DescriptionWrapper>
-            <PageTitle> Innovation Lab </PageTitle>
+            <PageTitle> Consulting </PageTitle>
             <PageDescription>
-              The Innovation Lab team is responsible for all research and development of new revenue sources including new products, services, and events. Innovation Lab members will be tasked with assessing new ideas from within the organization, sourcing and building new revenue-building products for the Daily Pennsylvanian Inc., and fleshing out any approved new products and ventures.
+            The Consulting team develops strategic advertising campaigns and produces pitch materials for advertising and sponsorship sales for The Daily Pennsylvanian Inc. DP Consultants work to build relationships with local and national business to help them better reach the Penn audience through partnerships with the DP.
             </PageDescription>
           </DescriptionWrapper>
           <ImageWrapper>

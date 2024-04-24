@@ -14,31 +14,40 @@ import {
 import {
   POPPINS_BOLD,
   POPPINS_REGULAR,
-  POPPINS_SEMI_BOLD
+  POPPINS_SEMI_BOLD,
+  MONTSERRAT_REGULAR,
+  PLAYFAIR_DISPLAY_SEMI_BOLD,
+  PLAYFAIR_DISPLAY_LIGHT,
+  PLAYFAIR_DISPLAY_REGULAR,
+  LATO_REGULAR,
+  LATO_BOLD,
+  MONTSERRAT_BOLD,
+  MONTSERRAT_SEMI_BOLD
 } from '../styles/fonts'
 import { WHITE, RED } from '../styles/constants'
 
 const Hero = s.div`
   text-align: center;
   color: white;
-  ${POPPINS_REGULAR}
+  ${PLAYFAIR_DISPLAY_LIGHT}
   padding-top: 3rem;
   padding-bottom: 1rem;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   
-  animation: animateBg 5s circular infinite;
-  background-image: linear-gradient(0deg,#aa1e22,#aa1e22,#aa1e22,#aa1e22);
-  background-size: 100% 300%;
+  animation: animateBg 10s linear infinite;
+  background-image: linear-gradient(30deg, #ffffff, #aa1e22, #82aaff, #f8c0d8);
+  background-size: 400% 400%;
 
   @keyframes animateBg {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 0% 100%; }
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
+
 `
 
 const HelloWorld = s.h1`
-  ${POPPINS_BOLD}
+  ${MONTSERRAT_SEMI_BOLD}
   font-size: 6rem;
 `
 
@@ -148,7 +157,7 @@ const Index = () => {
     <Container>
       <Hero>
         <span role="emoji" style={{ fontSize: '4rem' }}>
-        Welcome to
+        WELCOME TO
         </span>
         <HelloWorld> DP Business </HelloWorld>
         <p style={{ fontSize: '2.5rem' }}></p>
@@ -162,7 +171,6 @@ const Index = () => {
         </StyledLink>
       </Hero>
       <LatestWork />
-      {/* <Recruitment /> */}
     </Container>
   )
 }

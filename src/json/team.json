@@ -1,171 +1,56 @@
 [
   {
-    "name": "Director",
-    "description": "The director manages the development of all DP Developer products and collaborates with other Daily Pennsylvanian teams, from editors to designers, in order to integrate them seamlessly.",
+    "name": "Manager",
+    "description": "The innovation lab manager heads the development of all new DP products and collaborates with other Daily Pennsylvanian teams, from editors to designers, in order to integrate them seamlessly.",
     "members": [
       {
-        "name": "Bach Tran",
-        "tags": ["Director", "Mobile", "Web"],
+        "name": "Dhruv Gupta",
+        "tags": ["Manager", "Innovation Lab"],
         "emoji": "💪",
+        "from": "",
+        "img": "../images/members/web/bachtran.png"
+      }, 
+      {
+        "name": "Irene Park",
+        "tags": ["Manager", "Strategy and Promotions"],
+        "emoji": "😈",
         "from": "",
         "img": "../images/members/web/bachtran.png"
       }
     ]
   },
   {
-    "name": "Developers",
-    "description": "The developers behind the web projects of The Daily Pennsylvanian, as well as DP+, the iOS and Android app where you can keep up with the latest Daily Pennsylvanian, 34th Street, and Under the Button articles!",
+    "name": "Team Members",
+    "description": "The team behind all the new projects at The Daily Pennsylvanian, conducting the entrepreunerial work, market research, and business development necessary to ensure constant innovation at the DP!",
     "members": [
       {
-        "name": "Rohan Moniz",
-        "tags": ["Web Developer"],
+        "name": "Emre Karaarslan",
+        "tags": ["Innovation Lab"],
         "emoji": "",
         "from": "",
         "img": "../images/members/web/rohan.jpeg"
       },
       {
-        "name": "Erik Wei",
-        "tags": ["Mobile Developer"],
-        "emoji": "🌱",
-        "from": "",
-        "img": "../images/members/mobile/erik.jpeg"
-      },
-      {
-        "name": "Annabella Tian",
-        "tags": ["Mobile Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/members/mobile/annabella.jpg"
-      },
-      {
-        "name": "Brian Lu",
-        "tags": ["Mobile Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/members/mobile/brian.png"
-      },
-      {
-        "name": "Ethan Weisberg",
-        "tags": ["Web Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/members/web/ethan.jpg"
-      },
-      {
-        "name": "David Zhan",
-        "tags": ["Mobile Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/members/mobile/thebetterdavid.jpg"
-      },
-      {
-        "name": "Owen Lester",
-        "tags": ["Web Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/members/web/owenlester.jpg"
-      },
-      {
-        "name": "Angelina Zheng",
-        "tags": ["Web Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/logo.png"
-      }, 
-      {
-        "name": "Namita Sajai",
-        "tags": ["Web Developer"],
-        "emoji": "",
-        "from": "",
-        "img": "../images/logo.png"
-      },
-      {
-        "name": "Emily Shang",
-        "tags": ["Web Developer"],
-        "emoji": "🙌",
-        "from": "",
-        "img": "../images/logo.png"
-      }
-    ]
-  },
-  {
-    "name": "Emeritus",
-    "description": "Our previous members, without whom our work would not be possible.",
-    "members": [
-      {
-        "name": "Raunaq Singh",
-        "tags": ["Director", "Mobile", "Web"],
-        "from": "Philly",
-        "emoji": "🍯",
-        "img": "../images/members/leadership/raunaq.jpeg"
-      },
-      {
-        "name": "Peter Chen",
-        "tags": ["Co-Founder", "Director"],
-        "emoji": "🐯",
-        "from": "HK",
-        "img": "../images/members/leadership/peter.jpg"
-      },
-      {
-        "name": "David Fan",
-        "tags": ["Co-Founder", "Analytics Manager"],
-        "emoji": "🤩",
-        "from": "Manila",
-        "img": "../images/members/leadership/david.jpg"
-      },
-      {
-        "name": "Jasper Huang",
-        "tags": ["Analytics Manager"],
-        "emoji": "🎉",
-        "from": "CA",
-        "img": "../images/members/analytics/jasper.jpg"
-      },
-      {
-        "name": "Justin Lieb",
-        "tags": ["Developer Co-Lead", "Product Manager"],
-        "from": "LA",
-        "emoji": "🪀",
-        "img": "../images/members/mobile/lieb.jpeg"
-      },
-      {
-        "name": "Elizabeth Powell",
-        "tags": ["Developer Co-Lead"],
-        "emoji": "🥶",
-        "from": "NJ",
-        "img": "../images/members/mobile/liz.jpeg"
-      },
-      {
-        "name": "Ava Cruz",
-        "tags": ["Design Lead"],
-        "emoji": "🥑",
-        "from": "Delaware",
-        "img": "../images/members/design/ava.JPG"
-      },
-      {
-        "name": "Isabel Liang",
-        "tags": ["Design Lead"],
-        "emoji": "🐈",
-        "from": "Texas",
-        "img": "../images/members/design/isabel.png"
-      },
-      {
-        "name": "Felicity Yick",
-        "tags": ["Web Design"],
-        "from": "HK",
-        "img": "../images/members/design/felicity.jpg"
-      },
-      {
-        "name": "Alana Kelly",
-        "tags": ["Mobile Design"],
-        "from": "Florida",
-        "img": "../images/members/design/alana.jpg"
-      },
-      {
-        "name": "Mia Kim",
-        "tags": ["Mobile Design"],
-        "from": "Wisconsin",
-        "img": "../images/members/design/mia.jpeg"
-      }
+          "name": "Ananya Mukund",
+          "tags": ["Innovation Lab"],
+          "emoji": "",
+          "from": "",
+          "img": "../images/members/web/rohan.jpeg"
+        },
+        {
+          "name": "Amy Zheng",
+          "tags": ["Innovation Lab"],
+          "emoji": "",
+          "from": "",
+          "img": "../images/members/web/rohan.jpeg"
+        }, 
+        {
+          "name": "Irene Kim",
+          "tags": ["Strategy and Promotions"],
+          "emoji": "",
+          "from": "",
+          "img": "../images/members/web/bachtran.png"
+        }
     ]
   }
 ]
