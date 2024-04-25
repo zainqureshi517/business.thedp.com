@@ -1,9 +1,3 @@
-<p align="left">
-  <a href="https://developers.thedp.com/">
-    <img alt="DP Tech" src="./static/logo-rect.png" width="250" />
-  </a>
-</p>
-
 ## 🚀 Quick start
 
 ```

@@ -20,7 +20,7 @@ import {
 } from '../styles/fonts';
 
 const LatestWorkWrapper = styled.div`
-  margin: 4rem 8rem; /* 3rem margin on the sides */
+  margin: 4rem 8rem; // Adjusted to 4rem on sides for symmetry
 `;
 
 const Title = styled.h2`
@@ -34,8 +34,8 @@ const Title = styled.h2`
 const ProjectContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0px 10px 10px 5px rgba(0.3, 0.3, 0.3, 0.3);
-  padding: 1.5rem; /* 0.5rem padding within the ProjectContainer */
-  margin: 1rem 1rem; /* 2rem total space between items, 1rem each side */
+  padding: 1.5rem;
+  margin: 1rem 1rem;
 `;
 
 const ProjectName = styled.h2`
@@ -52,29 +52,29 @@ const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
     items: 3,
-    slidesToSlide: 3 // this will slide 3 items at a time
+    slidesToSlide: 3
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 3 // this will slide 3 items at a time
+    slidesToSlide: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    slidesToSlide: 2 // optional, change it as you see fit
+    slidesToSlide: 2
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1 // optional, change it as you see fit
+    slidesToSlide: 1
   }
 };
 
 export const LatestWork = () => {
   const data = useStaticQuery(graphql`
     query {
-      allProductsJson {
+      allProjectsJson {
         edges {
           node {
             name
@@ -86,6 +86,7 @@ export const LatestWork = () => {
                 }
               }
             }
+            link
           }
         }
       }
@@ -94,7 +95,7 @@ export const LatestWork = () => {
 
   return (
     <LatestWorkWrapper>
-      <Title>Our Latest Projects</Title>
+      <Title>Our Projects</Title>
       <Carousel
         responsive={responsive}
         ssr
@@ -106,7 +107,7 @@ export const LatestWork = () => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        {data.allProductsJson.edges.map(({ node }, index) => (
+        {data.allProjectsJson.edges.map(({ node }, index) => (
           <ProjectContainer key={index}>
             <Img fluid={node.img.childImageSharp.fluid} style={{ width: '100%', borderRadius: '10px' }} />
             <ProjectName>{node.name}</ProjectName>

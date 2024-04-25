@@ -166,7 +166,7 @@ const Teams = () => {
           link
         }
       }
-      imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
+      imageSharp(fluid: { originalName: { eq: "strategy.png" } }) {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
@@ -177,10 +177,10 @@ const Teams = () => {
   // Filter members and projects by team 'Innovation Lab'
   const filteredTeams = allTeamJson.nodes.map(team => ({
     ...team,
-    members: team.members.filter(member => member.tags.includes("Strategy and Promotions"))
+    members: team.members.filter(member => member.tags.includes("Strategy"))
   })).filter(team => team.members.length > 0);
   const filteredProjects = allProjectsJson.nodes.filter(project =>
-    project.team === "Strategy and Promotions"
+    project.team === "Strategy"
   );
 
   return (

@@ -2,23 +2,146 @@
     {
       "name": "High School News Letter",
       "description": "A new bi-weekly newsletter launched by the Daily Pennsylvanian aimed at helping high schooler stay caught up with opportunities in and around the school and eventually write a strong Why Penn essay!",
-      "img": "../images/dp-plus-black.png",
+      "img": "../images/hs_newsletter.png",
       "team": "Innovation Lab",
-      "link": "https://github.com/dailypenn/canada-goose"
+      "link": "https://www.thedp.com/",
+      "include": false
     },
     {
       "name": "DP Hacks",
       "description": "A first of its kind hackathon hosted by the Daily Pennsylvanian which challenges Penn developers to create new products, services, or plans which provide some value to the larger Penn community.",
-      "img": "../images/project-page.png",
+      "img": "../images/dp-hacks.png",
       "team": "Innovation Lab",
-      "link": "https://projects.thedp.com/"
+      "link": "https://projects.thedp.com/",
+      "include": false
     },
     {
         "name": "SEO Engine",
-        "description": "A first of its kind hackathon hosted by the Daily Pennsylvanian which challenges Penn developers to create new products, services, or plans which provide some value to the larger Penn community.",
-        "img": "../images/project-page.png",
+        "description": "AI generator created to optimize search engine performance for DP, 34th Street, and UTB articles.",
+        "img": "../images/seo-engine.png",
         "team": "Analytics",
-        "link": "https://projects.thedp.com/"
+        "link": "https://github.com/dailypenn",
+        "include": false
+    },
+    {
+      "name": "The Daily Pennsylvanian",
+      "description": "Employs marketing strategies to promote the Daily Pennsylvanian's News, Sports, and Opinion departments to a wider audience",
+      "img": "../images/web-building.png",
+      "team": "Strategy",
+      "link": "https://www.thedp.com/",
+      "include": true
+    },
+    {
+      "name": "34th Street",
+      "description": "Hosts events for Street's monthly magazine releases and develops marketing campaigns to expand 34th Street's readership.",
+      "img": "../images/street-website.png",
+      "team": "Strategy",
+      "link": "https://www.34st.com/",
+      "include": true
+    },
+    {
+        "name": "Under the button",
+        "description": "Creates promotional plans for UTB's annual joke issue and ongoing marketing strategies to increase UTB's reach.",
+        "img": "../images/utb-website.png",
+        "team": "Strategy",
+        "link": "https://www.underthebutton.com/",
+        "include": true
+    },
+    {
+        "name": "Recruitment",
+        "description": "Responsible for DP staff recruitment at the beginning of each semester. Coordinates information sessions and DP Open House each semester and creates marketing materials to better reach students interested in working for the DP.",
+        "img": "../images/dp-join.png",
+        "team": "Strategy",
+        "link": "https://projects.thedp.com/2024/join/",
+        "include": true
+    },
+    {
+        "name": "Product Promotion",
+        "description": "Developing continual promotion plans for ongoing DP editorial and business ventures, including crosswords, podcasts, newsletters, and affiliated projects",
+        "img": "../images/daybreak.jpg",
+        "team": "Strategy",
+        "link": "https://www.thedp.com/",
+        "include": true
+    },
+    {
+      "name": "Advertising",
+      "description": "Responsible for sales and advertising for the DP. Prospects  both local and national businesses for advertising, meets with potential clients to discuss advertising opportunities at the DP",
+      "img": "../images/dbk.png",
+      "team": "Consulting",
+      "link": "https://www.thedp.com/",
+      "include": false
+    },
+    {
+      "name": "Product Sponsorships",
+      "description": "Identifies and approaches potential businesses to sponsor certain DP products, services, or special print issues",
+      "img": "../images/IMG_7537.jpg",
+      "team": "Consulting",
+      "link": "https://www.thedp.com/",
+      "include": false
+    },
+    {
+        "name": "Corporate Partnerships",
+        "description": "Contacts potential corporate sponsors to support fundraising for the DP and create partnerships between the DP and the corporate world.",
+        "img": "../images/corporate.png",
+        "team": "Consulting",
+        "link": "https://www.thedp.com/",
+        "include": false
+    },
+    {
+      "name": "Operating Budget",
+      "description": "Creates the annual, $1.7M budget for the DP inc. Coordinates will all facets of the company in order to develop an accurate, comprehensive budget plan for the next fiscal year",
+      "img": "../images/budget.png",
+      "team": "Finance",
+      "link": "https://www.thedp.com/",
+      "include": false
+    },
+    {
+      "name": "Accounting",
+      "description": "Responsible for all accounts payable and receivable tasks, including payroll, staff reimbursement, client billing, and travel",
+      "img": "../images/IMG_7540.jpg",
+      "team": "Finance",
+      "link": "https://www.thedp.com/",
+      "include": false
+    },
+    {
+        "name": "5 year plan",
+        "description": "Oversees the implementation of the DP's 5 year revenue plan, in order to optimize and strengthen the DP's financial standing",
+        "img": "../images/IMG_7541.jpg",
+        "team": "Finance",
+        "link": "https://www.thedp.com/",
+        "include": false
+    },
+    {
+        "name": "Vanguard Potfolio",
+        "description": "Administers the DP's $2M vanguard stock portfolio, advises on investment strategy to the DP Board of Directors",
+        "img": "../images/vanguard.png",
+        "team": "Finance",
+        "link": "https://www.thedp.com/",
+        "include": false
+    },
+    {
+      "name": "Analytics Dashboard",
+      "description": "A dashboard for DP, 34th Street, and UTB data to highlight article performance and drive DP coverage",
+      "img": "../images/gal.png",
+      "team": "Analytics",
+      "link": "https://projects.thedp.com/",
+      "include": false
+    },
+    {
+        "name": "Liaisons",
+        "description": "Each Analytics staffer is assigned as a liaison to a specific department, to ensure the DP is making data-informed decisions across all departments.",
+        "img": "../images/heir.png",
+        "team": "Analytics",
+        "link": "https://projects.thedp.com/",
+        "include": false
+    },
+    {
+        "name": "Penn Course Search",
+        "description": "A search engine for Penn Students that uses AI to search the Penn Directory for courses that incorporate their interests",
+        "img": "../images/pcs.png",
+        "team": "Analytics",
+        "link": "https://projects.thedp.com/",
+        "include": false
     }
   ]
   

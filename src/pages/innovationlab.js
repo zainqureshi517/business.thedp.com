@@ -166,7 +166,7 @@ const Teams = () => {
           link
         }
       }
-      imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
+      imageSharp(fluid: { originalName: { eq: "ilab.png" } }) {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }

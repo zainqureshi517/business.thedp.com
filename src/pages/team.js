@@ -3,6 +3,7 @@ import s from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Row, Col } from 'react-bootstrap'
+import ContentGrid from '../components/funGrid'
 
 import { Container, PageTitle, Badge } from '../components'
 import { LIGHT_BLUE, WHITE, RED, RED_PERCENT } from '../styles/constants'
@@ -161,6 +162,7 @@ const Teams = () => {
           As the leading independent student media organization at the University of Pennsylvania, The Daily Pennsylvanian, Inc. seeks to inform and drive conversation while providing enduring student experiences in journalism and leadership. 
           </PageDescription>
         </div>
+        <ContentGrid />
         {teams.map((team, idx) => (
           <SectionWrapper idx={idx}>
             <TeamTitle>{team.name}</TeamTitle>

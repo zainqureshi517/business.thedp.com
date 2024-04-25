@@ -166,7 +166,7 @@ const Teams = () => {
           link
         }
       }
-      imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
+      imageSharp(fluid: { originalName: { eq: "finance.png" } }) {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
@@ -184,7 +184,7 @@ const Teams = () => {
   );
 
   return (
-    <Container title="Strategy and Promotions | ">
+    <Container title="Finance | ">
       <div style={{ marginTop: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <DescriptionWrapper>

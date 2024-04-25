@@ -2,31 +2,31 @@
   {
     "name": "Strategy and Promotion",
     "description": "DP Strategy & Promotions develops and enhances the unique brand identity of The Daily Pennsylvanian Inc., a $3 million dollar business. Our associates work to strategize and launch targeted product marketing campaigns that showcase the content of the DP, 34th Street Magazine, and Under the Button.",
-    "img": "../images/dp-plus-black.png",
-    "link": "https://github.com/dailypenn/canada-goose"
+    "img": "../images/board/strategy.png",
+    "link": "/strategy"
   },
   {
     "name": "Innovation Lab",
     "description": "The Innovation Lab team is responsible for all research and development of new revenue sources including new products, services, and events. Innovation Lab members will be tasked with assessing new ideas from within the organization, sourcing and building new revenue-building products for the Daily Pennsylvanian Inc., and fleshing out any approved new products and ventures.",
-    "img": "../images/project-page.png",
-    "link": "https://projects.thedp.com/"
+    "img": "../images/board/ilab.png",
+    "link": "/innovationlab"
   },
   {
     "name": "Finance and Accounting",
     "description": "While they teach the theory of finance in Wharton, the DP provides an ideal business laboratory where the money is real. The Finance & Accounting team is responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian Inc. including budget creation, revenue and expenditure analysis, and investment strategy",
-    "img": "../images/more-like-this.png",
-    "link": "https://github.com/dailypennanalytics/dpcontentrec"
+    "img": "../images/board/finance.png",
+    "link": "/finance"
   },
   {
     "name": "Consulting",
     "description": "The Consulting team develops strategic advertising campaigns and produces pitch materials for advertising and sponsorship sales for The Daily Pennsylvanian Inc. DP Consultants work to build relationships with local and national business to help them better reach the Penn audience through partnerships with the DP. ",
-    "img": "../images/dp-website.png",
-    "link": "https://www.thedp.com/"
+    "img": "../images/board/consulting.png",
+    "link": "/consulting"
   },
   {
     "name": "Analytics",
-    "description": "DP Analytics is the data science and business analytics hub of the Daily Pennsylvanian. The Analytics department leverages modern tools and technologies to enhance the digital and data analytics capabilities of the DP. Whether it is building detailed and interactive visualizations on Python, developing algorithms to analyze popular article topics, or working with various teams to drive growth in the DP’s business initiatives, DP Analytics staffers work on projects with direct impact on the DP, the Penn community, and a global readership audience.",
-    "img": "../images/street-website.png",
-    "link": "https://www.34st.com/"
+    "description": "DP Analytics is the data science and business analytics hub of the Daily Pennsylvanian. The Analytics department leverages modern tools and technologies to enhance the digital and data analytics capabilities of the DP. DP Analytics staffers work on projects with direct impact on the DP, the Penn community, and a global readership audience.",
+    "img": "../images/board/analytics.png",
+    "link": "/analytics"
   }
 ]

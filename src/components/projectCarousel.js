@@ -33,7 +33,6 @@ const ProjectsCarousel = ({ projects }) => {
           <div style={{ padding: '20px' }}>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </ProjectCard>
       ))}

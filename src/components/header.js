@@ -6,8 +6,8 @@ export const Header = ({ title = '' }) => (
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Landing page of the DP Developers that showcases our products and team members." />
-    <title>{`${title}DP Developers`}</title>
+    <meta name="description" content="Landing page of the DP Business team that showcases our projects and team members." />
+    <title>{`${title}DP Business`}</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -16,13 +16,13 @@ export const Header = ({ title = '' }) => (
 
     <meta
       property="og:title"
-      content="DP Developers"
+      content="DP Business"
     />
     <meta
       property="og:image"
       content="https://snworksceo.imgix.net/dpn/75b2a546-3e80-4e89-9bae-9dd69f898b72.sized-1000x1000.png?"
     />
-    <meta property="og:description" content="Landing page of the DP Developers that showcases our products and team members." />
+    <meta property="og:description" content="Landing page of the DP Business team that showcases our projects and team members" />
     <meta
       property="og:url"
       content="https://developers.thedp.com/"
@@ -31,13 +31,13 @@ export const Header = ({ title = '' }) => (
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="DP Developers"
+      content="DP Business"
     />
     <meta
       name="twitter:image"
       content="https://snworksceo.imgix.net/dpn/75b2a546-3e80-4e89-9bae-9dd69f898b72.sized-1000x1000.png?"
     />
-    <meta name="twitter:description" content="Landing page of the DP Developers that showcases our products and team members." />
+    <meta name="twitter:description" content="Landing page of the DP Business team that showcases our projects and team members" />
     <meta
       name="twitter:url"
       content="https://developers.thedp.com/"

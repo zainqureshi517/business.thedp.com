@@ -1,56 +1,425 @@
 [
   {
     "name": "Manager",
-    "description": "The innovation lab manager heads the development of all new DP products and collaborates with other Daily Pennsylvanian teams, from editors to designers, in order to integrate them seamlessly.",
+    "description": "The managers head the development of all new DP projects and collaborate with other Daily Pennsylvanian teams, from editors to designers, in order to integrate them seamlessly.",
     "members": [
+      {
+        "name": "Zain Qureshi",
+        "tags": ["Manager", "Business"],
+        "emoji": "🔥",
+        "from": "",
+        "img": "../images/members/business/zain.jpg"
+      },
+      {
+        "name": "Edward Liu",
+        "tags": ["Manager", "Analytics"],
+        "emoji": "📊",
+        "from": "",
+        "img": "../images/members/business/analytics/edward.jpg"
+      },
+      {
+        "name": "Irene Park",
+        "tags": ["Manager", "Strategy"],
+        "emoji": "🎯",
+        "from": "",
+        "img": "../images/members/business/strategy/irenepark.jpg"
+      },
       {
         "name": "Dhruv Gupta",
         "tags": ["Manager", "Innovation Lab"],
-        "emoji": "💪",
+        "emoji": "💡",
         "from": "",
-        "img": "../images/members/web/bachtran.png"
-      }, 
+        "img": "../images/members/business/innovation/dhruv.jpg"
+      },
       {
-        "name": "Irene Park",
-        "tags": ["Manager", "Strategy and Promotions"],
-        "emoji": "😈",
+        "name": "Sangeeta Quddus",
+        "tags": ["Manager", "Finance"],
+        "emoji": "💼",
         "from": "",
-        "img": "../images/members/web/bachtran.png"
+        "img": "../images/members/business/finance/sangeeta.png"
+      },
+      {
+        "name": "Erick Jarra",
+        "tags": ["Manager", "Consulting"],
+        "emoji": "🔍",
+        "from": "",
+        "img": "../images/members/business/consulting/erick.png"
       }
     ]
   },
   {
     "name": "Team Members",
-    "description": "The team behind all the new projects at The Daily Pennsylvanian, conducting the entrepreunerial work, market research, and business development necessary to ensure constant innovation at the DP!",
+    "description": "The team behind all the business projects at The Daily Pennsylvanian, conducting the entrepreunerial work, marketing, analytics, and business development necessary to ensure constant innovation at the DP!",
     "members": [
       {
-        "name": "Emre Karaarslan",
-        "tags": ["Innovation Lab"],
-        "emoji": "",
+        "name": "Eda Orakci",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udd2c",
         "from": "",
-        "img": "../images/members/web/rohan.jpeg"
+        "img": "../images/members/business/analytics/eda.jpg"
       },
       {
-          "name": "Ananya Mukund",
-          "tags": ["Innovation Lab"],
-          "emoji": "",
-          "from": "",
-          "img": "../images/members/web/rohan.jpeg"
-        },
-        {
-          "name": "Amy Zheng",
-          "tags": ["Innovation Lab"],
-          "emoji": "",
-          "from": "",
-          "img": "../images/members/web/rohan.jpeg"
-        }, 
-        {
-          "name": "Irene Kim",
-          "tags": ["Strategy and Promotions"],
-          "emoji": "",
-          "from": "",
-          "img": "../images/members/web/bachtran.png"
-        }
+        "name": "Selina Zou",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udcbb",
+        "from": "",
+        "img": "../images/members/business/analytics/selina.jpg"
+      },
+      {
+        "name": "Ray Liu",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udd0d",
+        "from": "",
+        "img": "../images/members/business/analytics/ray.jpg"
+      },
+      {
+        "name": "Anisha Talreja",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udca1",
+        "from": "",
+        "img": "../images/members/business/analytics/anisha.jpg"
+      },
+      {
+        "name": "Megan Zhang",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udd0d",
+        "from": "",
+        "img": "../images/members/business/analytics/megan.png"
+      },
+      {
+        "name": "Maxwell Ye",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/analytics/maxwell.jpg"
+      },
+      {
+        "name": "Jason Saito",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udcbc",
+        "from": "",
+        "img": "../images/members/business/analytics/jason.png"
+      },
+      {
+        "name": "Owen Lester",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udc54",
+        "from": "",
+        "img": "../images/members/business/analytics/owen.jpg"
+      },
+      {
+        "name": "Anmol Dash",
+        "tags": [
+          "Analytics"
+        ],
+        "emoji": "\ud83d\udcbc",
+        "from": "",
+        "img": "../images/members/business/analytics/anmol.jpg"
+      },
+      {
+        "name": "Catherine Chan",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udd2c",
+        "from": "",
+        "img": "../images/members/business/consulting/catherine.jpg"
+      },
+      {
+        "name": "Cissy Wang",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/consulting/cissy.jpg"
+      },
+      {
+        "name": "Erin Zhou",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udc54",
+        "from": "",
+        "img": "../images/members/business/consulting/erin.jpg"
+      },
+      {
+        "name": "Ava Chen",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/consulting/ava.jpg"
+      },
+      {
+        "name": "Jacqueline Errera",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83e\uddee",
+        "from": "",
+        "img": "../images/members/business/consulting/jackie.jpg"
+      },
+      {
+        "name": "Hannah Stoitchkov",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udcca",
+        "from": "",
+        "img": "../images/members/business/consulting/hannah.jpg"
+      },
+      {
+        "name": "Arjun Khanna",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83d\udca1",
+        "from": "",
+        "img": "../images/members/business/consulting/arjun.jpg"
+      },
+      {
+        "name": "Gabriella Khaskelis",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83e\uddee",
+        "from": "",
+        "img": "../images/members/business/consulting/gabriella.jpg"
+      },
+      {
+        "name": "Sarah Floquet",
+        "tags": [
+          "Consulting"
+        ],
+        "emoji": "\ud83e\uddee",
+        "from": "",
+        "img": "../images/members/business/consulting/sarah.jpg"
+      },
+      {
+        "name": "Ike Willis",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\udcca",
+        "from": "",
+        "img": "../images/members/default.png"
+      },
+      {
+        "name": "Lydia (Hayun) Bae",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\ude80",
+        "from": "",
+        "img": "../images/members/business/innovation/lydia.jpg"
+      },
+      {
+        "name": "Amy Zheng",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\udcbb",
+        "from": "",
+        "img": "../images/members/default.png"
+      },
+      {
+        "name": "Emre Karaarslan",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\udcca",
+        "from": "",
+        "img": "../images/members/business/innovation/emre.jpg"
+      },
+      {
+        "name": "Ananya Mukund",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\ude80",
+        "from": "",
+        "img": "../images/members/business/innovation/ananya.jpg"
+      },
+      {
+        "name": "Irene Lee",
+        "tags": [
+          "Innovation Lab"
+        ],
+        "emoji": "\ud83d\udcca",
+        "from": "",
+        "img": "../images/members/business/innovation/irenelee.jpg"
+      },
+      {
+        "name": "Ingrid Li",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/business/finance/ingrid.jpg"
+      },
+      {
+        "name": "Nathaniel Sears",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/business/finance/nathaniel.jpg"
+      },
+      {
+        "name": "Arya Bansal",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/business/finance/arya.jpg"
+      },
+      {
+        "name": "Nikki Liu",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/default.png"
+      },
+      {
+        "name": "Lisel Ndrecka",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/business/finance/lisel.jpg"
+      },
+      {
+        "name": "Nitika Desai",
+        "tags": [
+          "Finance"
+        ],
+        "emoji": "\ud83d\udcb0",
+        "from": "",
+        "img": "../images/members/business/finance/nitika.jpg"
+      },
+      {
+        "name": "Isabella Turri",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/isa.jpg"
+      },
+      {
+        "name": "Irene Kim",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/irenekim.jpg"
+      },
+      {
+        "name": "Raelynn Cui",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/raelynn.jpg"
+      },
+      {
+        "name": "Ahona Rana",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/ahona.jpg"
+      },
+      {
+        "name": "Sanaa Patel",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/sanaa.jpg"
+      },
+      {
+        "name": "Sarah Usandivaras",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/sarah.jpg"
+      },
+      {
+        "name": "Zoe Champ",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/zoe.jpg"
+      },
+      {
+        "name": "Sophie-Anne Brouwers",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/sophie.jpg"
+      },
+      {
+        "name": "Tiffany Chen",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/tiffany.jpg"
+      },
+      {
+        "name": "Carine Medellus",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/carine.jpg"
+      },
+      {
+        "name": "Stephanie Skinner",
+        "tags": [
+          "Strategy"
+        ],
+        "emoji": "\ud83d\udcc8",
+        "from": "",
+        "img": "../images/members/business/strategy/stephanie.jpg"
+      }
     ]
   }
 ]

@@ -3,6 +3,8 @@ import s from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Col } from 'react-bootstrap'
+import DepartmentsGrid from '../components/DepartmentsGrid'
+import styled from 'styled-components';
 
 import {
   Container,
@@ -22,14 +24,16 @@ import {
   LATO_REGULAR,
   LATO_BOLD,
   MONTSERRAT_BOLD,
-  MONTSERRAT_SEMI_BOLD
+  MONTSERRAT_SEMI_BOLD,
+  PLAYFAIR_DISPLAY_MEDIUM,
+  MONTSERRAT_MEDIUM
 } from '../styles/fonts'
 import { WHITE, RED } from '../styles/constants'
 
 const Hero = s.div`
   text-align: center;
   color: white;
-  ${PLAYFAIR_DISPLAY_LIGHT}
+  ${MONTSERRAT_SEMI_BOLD}
   padding-top: 3rem;
   padding-bottom: 1rem;
   border-bottom-left-radius: 25px;
@@ -47,7 +51,7 @@ const Hero = s.div`
 `
 
 const HelloWorld = s.h1`
-  ${MONTSERRAT_SEMI_BOLD}
+  ${PLAYFAIR_DISPLAY_MEDIUM}
   font-size: 6rem;
 `
 
@@ -64,27 +68,37 @@ const Checkout = s.p`
 
 const RecruitmentRow = s.div`
   padding: 1rem 3rem;
-  background-color: ${RED};
-  border-radius: 22px;
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 2rem;
+  margin: 2rem 0rem;
 
-  @media (max-width: 768px) {
-    padding: 1rem 2rem;
-    margin: 2rem 1rem;
-  }
+  animation: animateBg 10s linear infinite;
+  background-image: linear-gradient(30deg, #ffffff, #aa1e22, #82aaff, #f8c0d8);
+  background-size: 400% 400%;
+
+  @keyframes animateBg {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 `
 
 const RecruitmentTitle = s.h1`
-  ${POPPINS_SEMI_BOLD}
+  ${PLAYFAIR_DISPLAY_LIGHT}
   font-size: 3rem;
+  color: white;
+`
+const Title = styled.h2`
+  ${MONTSERRAT_MEDIUM}
+  color: #800000;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 `
 
 const RecruitmentDescription = s.p`
   margin-top: 2.5rem;
   ${POPPINS_REGULAR}
   font-size: 0.9rem;
+  color: white;
 `
 
 const ApplyButton = s.div`
@@ -113,19 +127,49 @@ const LeftColWrapper = s.div`
 `
 
 const Recruitment = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      img: file(relativePath: { eq: "web-building.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid
+  const { allTeamJson, allProjectsJson, imageSharp } = useStaticQuery(graphql`
+  query {
+    allTeamJson {
+      nodes {
+        name
+        description
+        members {
+          name
+          tags
+          emoji
+          from
+          img {
+            childImageSharp {
+              fluid(maxWidth: 1000, maxHeight: 1000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
-  `)
-
-  const { img } = data
+    allProjectsJson {
+      nodes {
+        name
+        description
+        img {
+          childImageSharp {
+            fluid(maxWidth: 1000, maxHeight: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        team
+        link
+      }
+    }
+    imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`);
 
   return (
     <RecruitmentRow>
@@ -146,7 +190,7 @@ const Recruitment = () => {
         </LeftColWrapper>
       </Col>
       <Col>
-        <Img fluid={img.childImageSharp.fluid} />
+        <Img fluid={imageSharp.fluid} />
       </Col>
     </RecruitmentRow>
   )
@@ -171,6 +215,9 @@ const Index = () => {
         </StyledLink>
       </Hero>
       <LatestWork />
+      <Recruitment />
+      <Title>Our Departments</Title>
+      <DepartmentsGrid />
     </Container>
   )
 }
